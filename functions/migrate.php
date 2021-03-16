@@ -61,7 +61,7 @@ while($row = mysqli_fetch_array($res)) {
 // ----- MODS ----- \\
 $res = mysqli_query($conn2, "SELECT * FROM `releases`");
 while($row = mysqli_fetch_array($res)) {
-	$url = "http://".$config['host'].$config['dir']."mods/".end(explode("/",$row['path']));
+	$url = "".$config['host'].$config['dir']."mods/".end(explode("/",$row['path']));
 	$packageres = mysqli_query($conn2, "SELECT * FROM `packages` WHERE `id` = ".$row['package_id']);
 	$package = mysqli_fetch_array($packageres);
 	mysqli_query($conn,"INSERT INTO `mods` (`type`,`url`,`version`,`md5`,`filename`,`name`,`pretty_name`,`author`,`link`,`donlink`,`description`) VALUES ('mod','".$url."','".$row['version']."','".$row['md5']."','".end(explode("/",$row['path']))."','".$package['slug']."','".$package['name']."','".$package['author']."','".$package['website_url']."','".$package['donation_url']."','".$package['description']."')");

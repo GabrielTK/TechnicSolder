@@ -19,7 +19,7 @@ $bmods = mysqli_real_escape_string($conn, $_POST['modlist']);
 $bjava = mysqli_real_escape_string($conn, $_POST['java']);
 $bmemory = mysqli_real_escape_string($conn, $_POST['memory']);
 $bforge = mysqli_real_escape_string($conn, $_POST['versions']);
-mysqli_query($conn, "INSERT INTO modpacks(`name`,`display_name`,`icon`,`icon_md5`,`logo`,`logo_md5`,`background`,`background_md5`,`public`,`recommended`,`latest`) VALUES ('".$mpname."','".$mpdname."','http://".$config['host'].$config['dir']."resources/default/icon.png','A5EA4C8FA53984C911A1B52CA31BC008','http://".$config['host'].$config['dir']."resources/default/logo.png','70A114D55FF1FA4C5EEF7F2FDEEB7D03','http://".$config['host'].$config['dir']."resources/default/background.png','88F838780B89D7C7CD10FE6C3DBCDD39',1,'1.0','1.0')");
+mysqli_query($conn, "INSERT INTO modpacks(`name`,`display_name`,`icon`,`icon_md5`,`logo`,`logo_md5`,`background`,`background_md5`,`public`,`recommended`,`latest`) VALUES ('".$mpname."','".$mpdname."','".$config['host'].$config['dir']."resources/default/icon.png','A5EA4C8FA53984C911A1B52CA31BC008','".$config['host'].$config['dir']."resources/default/logo.png','70A114D55FF1FA4C5EEF7F2FDEEB7D03','".$config['host'].$config['dir']."resources/default/background.png','88F838780B89D7C7CD10FE6C3DBCDD39',1,'1.0','1.0')");
 $mpq = mysqli_query($conn, "SELECT `id` FROM `modpacks` ORDER BY `id` DESC LIMIT 1");
 $mp = mysqli_fetch_array($mpq);
 $mpi =  intval($mp['id']);

@@ -1,3 +1,7 @@
+## **NOTICE**
+This update introduces HTTPS support, and is only plug-and-play for new installs.
+If you have got an existing install, please add the URL Protocol Prefix (`http://` or `https://`) to your host in `functions/config.php` or via the Configure Page.
+
 # TechnicSolder
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Latest Stable Version](https://img.shields.io/badge/dynamic/json.svg?label=Latest%20Stable%20Version&url=https%3A%2F%2Fraw.githubusercontent.com%2FTheGameSpider%2FTechnicSolder%2Fmaster%2Fapi%2Fversion.json&query=version&colorB=brightgreen)

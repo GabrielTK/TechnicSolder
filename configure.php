@@ -159,7 +159,7 @@ if(!isset($_GET['reconfig'])) {
 					</div>
 					<div class="form-group">
 						<label for="email">Installation details</label>
-						<input required name="host" type="text" class="form-control" placeholder="Webserver public IP or domain name. (does NOT start with http[s]://)"><br />
+						<input required name="host" type="text" class="form-control" placeholder="Webserver public IP or domain name. (Please start with http:// or https://)"><br />
 						<input class="form-control" type="text" name="dir" placeholder="Install Directory" value="/" id="dir" required><br />
 						<input required name="api_key" type="text" class="form-control" placeholder="API Key">
 						<small class="form-text text-muted">You can find you API Key in your profile at <a target="_blank" href="https://technicpack.net">technicpack.net</a></small>

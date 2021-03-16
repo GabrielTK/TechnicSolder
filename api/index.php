@@ -78,7 +78,7 @@ if(uri($url,"api/modpack")){
 				}
 				$response = array(
 					"modpacks" => $modpacks,
-					"mirror_url" => "http://".$config['host']."/mods"
+					"mirror_url" => "".$config['host']."/mods"
 				);
 			}
 		} else {
@@ -98,7 +98,7 @@ if(uri($url,"api/modpack")){
 			}
 			$response = array(
 				"modpacks" => $modpacks,
-				"mirror_url" => "http://".$config['host']."/mods"
+				"mirror_url" => "".$config['host']."/mods"
 			);
 		}
 	} else {
@@ -118,7 +118,7 @@ if(uri($url,"api/modpack")){
 		}
 		$response = array(
 			"modpacks" => $modpacks,
-			"mirror_url" => "http://".$config['host']."/mods"
+			"mirror_url" => "".$config['host']."/mods"
 		);
 	}
 	print(json_encode($response));
@@ -199,7 +199,7 @@ while($modpack=mysqli_fetch_array($result)){
 												"name" => $modinfo['name'],
 												"version" => $modinfo['version'],
 												"md5" => $modinfo['md5'],
-												"url" => "http://".$config['host'].$config['dir'].$modinfo['type']."s/".$modinfo['filename'],
+												"url" => "".$config['host'].$config['dir'].$modinfo['type']."s/".$modinfo['filename'],
 												"pretty_name" => $modinfo['pretty_name'],
 												"author" => $modinfo['author'],
 												"description" => $modinfo['description'],
@@ -225,7 +225,7 @@ while($modpack=mysqli_fetch_array($result)){
 												"name" => $modinfo['name'],
 												"version" => $modinfo['version'],
 												"md5" => $modinfo['md5'],
-												"url" => "http://".$config['host'].$config['dir'].$modinfo['type']."s/".$modinfo['filename']
+												"url" => "".$config['host'].$config['dir'].$modinfo['type']."s/".$modinfo['filename']
 											);
 										} else {
 											$mods[$modnumber] = array(
@@ -242,7 +242,7 @@ while($modpack=mysqli_fetch_array($result)){
 											"name" => $modinfo['name'],
 											"version" => $modinfo['version'],
 											"md5" => $modinfo['md5'],
-											"url" => "http://".$config['host'].$config['dir'].$modinfo['type']."s/".$modinfo['filename']
+											"url" => "".$config['host'].$config['dir'].$modinfo['type']."s/".$modinfo['filename']
 										);
 									} else {
 										$mods[$modnumber] = array(
